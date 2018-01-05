@@ -24,6 +24,7 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
   * Take a person's age in years and convert it to seconds.
     Input: 10 years
     Output: 315360000 seconds
+  Note: rounding all planetary ages to 2 decimal places
   * Return the age of a human in Mercury years.
     Input: 10 years
     Output: 2.4 years

@@ -41,16 +41,22 @@ $(document).ready(function() {
     var name = $("#name").val();
     var age = parseInt($("#age").val());
     var ageCalculator = new Person(name, age);
-    var ageInSeconds = ageCalculator.calculateSeconds(age);
-    var ageOnMercury = ageCalculator.mercuryAge(age);
-    var ageOnVenus = ageCalculator.venusAge(age);
-    var ageOnMars = ageCalculator.marsAge(age);
-    var ageOnJupiter = ageCalculator.jupiterAge(age);
-    console.log(ageInSeconds);
-    console.log(ageOnMercury);
-    console.log(ageOnVenus);
-    console.log(ageOnMars);
-    console.log(ageOnJupiter);
+    var ageInSeconds = (ageCalculator.calculateSeconds(age));
+    var ageOnMercury = (ageCalculator.mercuryAge(age)).toFixed(2);
+    var ageOnVenus = (ageCalculator.venusAge(age)).toFixed(2);
+    var ageOnMars = (ageCalculator.marsAge(age)).toFixed(2);
+    var ageOnJupiter = (ageCalculator.jupiterAge(age)).toFixed(2);
+
+    $("#your-planetary-ages").show();
+    $("#name-display").text(name);
+    $("#seconds").text(ageInSeconds);
+    $("#mercury").text(ageOnMercury);
+    $("#venus").text(ageOnVenus);
+    $("#mars").text(ageOnMars);
+    $("#jupiter").text(ageOnJupiter);
+
+    console.log(name);
+
     $('#age-input')[0].reset();
   }); //submit event
 });//document ready
