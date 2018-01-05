@@ -11,7 +11,7 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 ## Setup/Installation Requirements
 
 * _This is a great place_
-* _to list setup instructions_
+* _to list setu2p instructions_
 * _in a simple_
 * _easy-to-understand_
 * _format_
@@ -24,7 +24,6 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
   * Take a person's age in years and convert it to seconds.
     Input: 10 years
     Output: 315360000 seconds
-  Note: rounding all planetary ages to 2 decimal places
   * Return the age of a human in Mercury years.
     Input: 10 years
     Output: 2.4 years
@@ -33,7 +32,7 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
     Output: 6.2 years
   * Return the age of a human in Mars years.
     Input: 10 years
-    Output: 18.79 years
+    Output: 18.799999999999997 years
   * Return the age of a human in Jupiter years.
     Input: 10 years
     Output: 118.6 years

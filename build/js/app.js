@@ -49,6 +49,8 @@ $(document).ready(function() {
     var ageOnMars = (ageCalculator.marsAge(age)).toFixed(2);
     var ageOnJupiter = (ageCalculator.jupiterAge(age)).toFixed(2);
 
+    console.log(ageOnMercury);
+    
     $("#your-planetary-ages").show();
     $("#name-display").text(name);
     $("#seconds").text(ageInSeconds);
