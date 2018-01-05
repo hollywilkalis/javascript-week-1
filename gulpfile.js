@@ -7,6 +7,18 @@ var utilities = require('gulp-util');
 var del = require('del');
 var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
+//tells gulp where to find the required bootstrap files
+var lib = require('bower-files')({
+  "overrides":{
+    "bootstrap" : {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+});
 
 
 //tasks
@@ -40,6 +52,24 @@ gulp.task('minifyScripts', ['jsBrowserify'], function(){
 gulp.task('clean', function(){
   return del(['build', 'tmp']);
 });
+
+//managing front-end javascript
+gulp.task('bowerJS', function(){
+  return gulp.src(lib.ext('js').files)
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/us'))
+});
+
+//managing styles
+gulp.task('bowerCSS', function(){
+  return gulp.src(lib.ext('css').files)
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('./build/css'));
+});
+
+//runs the two Bower tasks
+gulp.task('bower', ['bowerJS', 'bowerCSS']);
 
 //build tasks
 gulp.task("build", ['clean'], function(){
