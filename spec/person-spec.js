@@ -15,3 +15,12 @@ describe('Person', function() {
     expect(person.calculateSeconds()).not.toEqual(315360100);
   });
 });
+
+describe('Person', function() {
+  it('should test whether the input age is being correctly converted for Mercury, Venus, Mars, and Jupiter ', function() {
+    var person = new Person("Holly",10)
+    //testing reflects rounding of ages to two decimal places
+    expect(person.mercuryAge()).toEqual(2.40);
+    expect(person.calculateSeconds()).not.toEqual(2.46);
+  });
+});
