@@ -1,9 +1,9 @@
-//Interface Logic goes here
-$(document).ready(function() {
-  $("form#age-input").submit(function(event) {
-    event.preventDefault();
-    var age = $("#age").val();
-    alert(age);
-    $('#age-input')[0].reset();
-  }); //submit event
-});//document ready
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype.calculateSeconds = function(age) {
+  var ageInSeconds = this.age * 31536000
+  return ageInSeconds;
+}
