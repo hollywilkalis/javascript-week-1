@@ -8,11 +8,19 @@ $(document).ready(function() {
     var age = parseInt($("#age").val());
     var ageCalculator = new Person(name, age);
     var ageInSeconds = ageCalculator.calculateSeconds(age);
+    var ageOnMercury = ageCalculator.mercuryAge(age);
+    var ageOnVenus = ageCalculator.venusAge(age);
+    var ageOnMars = ageCalculator.marsAge(age);
+    var ageOnJupiter = ageCalculator.jupiterAge(age);
     console.log(ageInSeconds);
+    console.log(ageOnMercury);
+    console.log(ageOnVenus);
+    console.log(ageOnMars);
+    console.log(ageOnJupiter);
     $('#age-input')[0].reset();
   }); //submit event
 });//document ready
 
-$(document).ready(function(){
-  $('#time').text(moment());
-});
+// $(document).ready(function(){
+//   $('#time').text(moment());
+// });

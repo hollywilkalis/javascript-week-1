@@ -1,0 +1,13 @@
+.jumbotron {
+  background-image: url('../img/galaxy.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 40px;
+  border: 2px midnightblue solid;
+}
+
+body {
+  background-color: black;
+  color: white;
+}

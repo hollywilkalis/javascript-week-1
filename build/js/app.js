@@ -9,6 +9,26 @@ Person.prototype.calculateSeconds = function(age) {
   return ageInSeconds;
 };
 
+Person.prototype.mercuryAge = function(age) {
+  var ageOnMercury = this.age * .24;
+  return ageOnMercury;
+};
+
+Person.prototype.venusAge = function(age) {
+  var ageOnVenus = this.age * .62;
+  return ageOnVenus;
+};
+
+Person.prototype.marsAge = function(age) {
+  var ageOnMars = this.age * 1.88;
+  return ageOnMars;
+};
+
+Person.prototype.jupiterAge = function(age) {
+  var ageOnJupiter = this.age * 11.86;
+  return ageOnJupiter;
+};
+
 exports.personModule = Person;
 
 },{}],2:[function(require,module,exports){
@@ -22,13 +42,21 @@ $(document).ready(function() {
     var age = parseInt($("#age").val());
     var ageCalculator = new Person(name, age);
     var ageInSeconds = ageCalculator.calculateSeconds(age);
+    var ageOnMercury = ageCalculator.mercuryAge(age);
+    var ageOnVenus = ageCalculator.venusAge(age);
+    var ageOnMars = ageCalculator.marsAge(age);
+    var ageOnJupiter = ageCalculator.jupiterAge(age);
     console.log(ageInSeconds);
+    console.log(ageOnMercury);
+    console.log(ageOnVenus);
+    console.log(ageOnMars);
+    console.log(ageOnJupiter);
     $('#age-input')[0].reset();
   }); //submit event
 });//document ready
 
-$(document).ready(function(){
-  $('#time').text(moment());
-});
+// $(document).ready(function(){
+//   $('#time').text(moment());
+// });
 
 },{"./../js/scripts.js":1}]},{},[2]);

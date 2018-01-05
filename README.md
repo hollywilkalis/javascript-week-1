@@ -22,12 +22,22 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 1. Specs
   * Take a person's age in years and convert it to seconds.
-  * Take two dates and determine the difference, in seconds.
+    Input: 10 years
+    Output: 315360000 seconds
   * Return the age of a human in Mercury years.
+    Input: 10 years
+    Output: 2.4 years
   * Return the age of a human in Venus years.
+    Input: 10 years
+    Output: 6.2 years
   * Return the age of a human in Mars years.
+    Input: 10 years
+    Output: 18.79 years
   * Return the age of a human in Jupiter years.
+    Input: 10 years
+    Output: 118.6 years
   * Determine how many years a user has left to live on each planet.
+  * Take two dates and determine the difference, in seconds.
 
 2. Project organization
   * Divide script into user interface (controls user input form) and back end (performs the various age calculations)
