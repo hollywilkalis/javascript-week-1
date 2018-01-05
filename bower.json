@@ -1,0 +1,22 @@
+{
+  "name": "js-week-1",
+  "description": "#### This application will determine a user’s age based on a planet’s solar years. Project date: January 5, 2018",
+  "main": "index.js",
+  "authors": [
+    "Holly Wilkalis <holly.wilkalis@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hollywilkalis/javascript-week-1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.20.1"
+  }
+}
