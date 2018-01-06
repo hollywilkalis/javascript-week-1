@@ -1,3 +1,23 @@
+
+
+// var date1 = new Date("7/13/2010");
+// var date2 = new Date("12/15/2010");
+// var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+// var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+// alert(diffDays);
+
+$(document).ready(function() {
+  $("form#birthdate-input").submit(function(event) {
+    event.preventDefault();
+    var birthdate = $("#birthdate").val();
+    var currentDate = moment().format("MMM Do YY");
+    var timeDiff = Math.abs(currentDate - birthdate);
+    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    alert(diffDays);
+    $('#birthdate-input')[0].reset();
+  }); //submit event
+});//document ready
+
 var Person = require('./../js/scripts.js').personModule;
 
 //Interface Logic goes here

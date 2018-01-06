@@ -6,17 +6,17 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+A solar year lasts 365 days on planet Earth. However, the length of a solar year varies from planet to planet. For instance, a solar year on Mercury lasts 88 days. This application will determine a user’s age based on a planet’s solar years.
+
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setu2p instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Open your terminal (or whatever tool you use to access the command line)
+* Navigate to the location where you wish to save the project files.
+* Run this command to clone the files: $ git clone https://github.com/hollywilkalis/javascript-week-1
+* Run this command to navigate into the project directory: $ cd javascript-week-1
+* To view a live version of the site, visit http://hollywilkalis.github.io/javascript-week-1
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Planning
 
@@ -24,43 +24,49 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
   * Take a person's age in years and convert it to seconds.
     Input: 10 years
     Output: 315360000 seconds
-  * Return the age of a human in Mercury years.
+  * Return the age of a human in Mercury years based on age entered.
     Input: 10 years
     Output: 2.4 years
-  * Return the age of a human in Venus years.
+  * Return the age of a human in Venus years based on age entered.
     Input: 10 years
     Output: 6.2 years
-  * Return the age of a human in Mars years.
+  * Return the age of a human in Mars years based on age entered.
     Input: 10 years
     Output: 18.799999999999997 years
-  * Return the age of a human in Jupiter years.
+  * Return the age of a human in Jupiter years based on age entered.
     Input: 10 years
     Output: 118.6 years
-  * Determine how many years a user has left to live on each planet.
-  * Take two dates and determine the difference, in seconds.
 
 2. Project organization
   * Divide script into user interface (controls user input form) and back end (performs the various age calculations)
-  * Use Human object constructor and prototypes to calculate age on each planet.
+  * Use Person object constructor and prototypes to calculate age on each planet.
 
 3. UX/UI
-  * Use bootstrap & CSS for minimal styling of single page (not planning to use SASS).
+  * Use bootstrap & CSS for minimal styling of single user interface page (not planning to use SASS). Ages will be hidden until form submission.
 
+4. Future features under development
+  * Calculate age based on birthdate input by user.  
+  * Take two dates and determine the difference, in seconds.
+  * Determine how many years a user has left to live on each planet.
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+The planetary age calculations do not take into account leap years.
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+Are you also having problems with Node? I feel your pain. Let's talk at holly.wilkalis@gmail.com.
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+This project uses:
+* HTML, Bootstrap and CSS
+* Node and bower
+* Jasmine and Karma are used for testing
+* A gulp-based asset pipeline with a development server
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*MIT license*
 
-Copyright (c) 2015 **_{List of contributors or company name}_**
+Copyright (c) 2018 **Holly Wilkalis**
