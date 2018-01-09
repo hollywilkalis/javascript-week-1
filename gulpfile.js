@@ -8,6 +8,10 @@ var del = require('del');
 var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
 var babelify = require("babelify");
+var lifeExpectancy = require('life-expectancy');
+var countries = require('country-list')();
+
+
 //tells gulp where to find the required bootstrap files
 var lib = require('bower-files')({
   "overrides":{

@@ -16,9 +16,7 @@ $(document).ready(function() {
     // var age = parseInt($("#age").val());
     var birthdate = $("#birthdate").val();
     var userAge = ageCalc(birthdate);
-    alert(userAge);
     var ageCalculator = new Person(name, birthdate, userAge);
-    alert(Person.userAge);
     var ageInSeconds = (ageCalculator.calculateSeconds(userAge));
     var ageOnMercury = (ageCalculator.mercuryAge(userAge)).toFixed(2);
     var ageOnVenus = (ageCalculator.venusAge(userAge)).toFixed(2);

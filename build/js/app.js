@@ -11,7 +11,6 @@ function Person(name, birthdate, userAge) {
 Person.prototype.calculateSeconds = function (userAge) {
   var ageInSeconds = this.userAge * 31536000;
   return ageInSeconds;
-  console.log(ageInSeconds);
 };
 
 Person.prototype.mercuryAge = function (userAge) {
@@ -62,9 +61,7 @@ $(document).ready(function () {
     // var age = parseInt($("#age").val());
     var birthdate = $("#birthdate").val();
     var userAge = ageCalc(birthdate);
-    alert(userAge);
     var ageCalculator = new Person(name, birthdate, userAge);
-    alert(Person.userAge);
     var ageInSeconds = ageCalculator.calculateSeconds(userAge);
     var ageOnMercury = ageCalculator.mercuryAge(userAge).toFixed(2);
     var ageOnVenus = ageCalculator.venusAge(userAge).toFixed(2);

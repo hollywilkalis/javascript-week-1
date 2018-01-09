@@ -12,6 +12,11 @@ body {
   color: white;
 }
 
+.highlight {
+  font-weight: bold;
+  color: lightyellow;
+}
+
 #your-planetary-ages {
   display: none;
   padding: 20px;

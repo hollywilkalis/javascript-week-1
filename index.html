@@ -9,13 +9,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- <link rel="stylesheet" href="build/css/vendor.css">
-    <script src="build/js/vendor.min.js"></script>
-    <script type="text/javascript" src="build/js/app.js"></script>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
-    <title></title>
+    <title>Super Galactic Age Calculator</title>
   </head>
   <body>
     <div class="container">
@@ -24,35 +18,24 @@
       <form id="age-input">
         <div class="form-group">
           <label for="name">What is your name?</label>
-          <input type="text" class="form-control" id="name" placeholder="Do it here">
-        </div>
-        <div class="form-group">
-          <label for="age">Enter your age in years</label>
-          <input type="text" class="form-control" id="age" placeholder="Do it here">
+          <input type="text" class="form-control" id="name" placeholder="Your name goes here">
         </div>
         <div class="form-group">
           <label for="birthdate">Enter your birthdate</label>
-          <input type="date" class="form-control" id="birthdate" placeholder="Do it here">
+          <input type="date" class="form-control" id="birthdate" placeholder="Type your birthday in right here">
         </div>
         <button class="btn btn-danger" type="submit" id="submit-age">Submit</button>
 
       </form>
 
-      <!-- <form id="birthdate-input">
-        <div class="form-group">
-          <label for="birthdate">What is your birthdate?</label>
-          <input type="date" class="form-control" id="birthdate" placeholder="Do it here">
-        </div>
-          <button class="btn btn-danger" type="submit" id="submit-birthdate">Submit</button>
-      </form> -->
-
       <div id="your-planetary-ages">
-        <h2><span id="name-display"></span>, you are <span id="seconds"></span> seconds old here on earth</h2>
+        <h3><span id="name-display"></span>, you are <span id="seconds"></span> seconds old here on earth</h3>
+        <p>Want to know how old you are on some other planets, give or take a few days?</p>
         <ul>
-          <li>On Mercury, you are <span id="mercury"></span> years old</li>
-          <li>On Venus, you are <span id="venus"></span> years old</li>
-          <li>On Mars, you are <span id="mars"></span> years old</li>
-          <li>On Jupiter, you are <span id="jupiter"></span> years old</li>
+          <li>On Mercury, you are <span class="highlight" id="mercury"></span> years old</li>
+          <li>On Venus, you are <span class="highlight" id="venus"></span> years old</li>
+          <li>On Mars, you are <span class="highlight" id="mars"></span> years old</li>
+          <li>On Jupiter, you are <span class="highlight" id="jupiter"></span> years old</li>
         </ul>
       </div>
 
