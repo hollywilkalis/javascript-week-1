@@ -7,6 +7,7 @@ var utilities = require('gulp-util');
 var del = require('del');
 var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
+var babelify = require("babelify");
 //tells gulp where to find the required bootstrap files
 var lib = require('bower-files')({
   "overrides":{
@@ -35,11 +36,14 @@ gulp.task('concatInterface', function(){
 });
 
 //call the browserify function, pulls in the user interface file, which already requires the other scripts file
-gulp.task('jsBrowserify', ['concatInterface'], function(){
-  return browserify({entries: ['./tmp/allConcat.js']})
+gulp.task('jsBrowserify', ['concatInterface'], function() {
+  return browserify({ entries: ['./tmp/allConcat.js']})
+    .transform(babelify.configure({
+      presets: ["es2015"]
+    }))
     .bundle()
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('./build/js'))
 });
 
 //browersify is a dependency. runs after Browserify, minimifies scripts for efficiency
