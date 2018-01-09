@@ -21,21 +21,25 @@ A solar year lasts 365 days on planet Earth. However, the length of a solar year
 ## Planning
 
 1. Specs
-  * Take a person's age in years and convert it to seconds.
-    Input: 10 years
-    Output: 315360000 seconds
+  For testing will use a beforeEach function
+  * Calculate age on earth based on input birthdate.
+    Input: 01/26/1974
+    Output: 44 years
+  * Convert age from years to seconds.
+    Input: 44
+    Output: 1387584000
   * Return the age of a human in Mercury years based on age entered.
-    Input: 10 years
-    Output: 2.4 years
+    Input: 44 years
+    Output: 10.559999999999999 years
   * Return the age of a human in Venus years based on age entered.
-    Input: 10 years
-    Output: 6.2 years
+    Input: 44 years
+    Output: 27.28 years
   * Return the age of a human in Mars years based on age entered.
-    Input: 10 years
-    Output: 18.799999999999997 years
+    Input: 44 years
+    Output: 82.72 years
   * Return the age of a human in Jupiter years based on age entered.
-    Input: 10 years
-    Output: 118.6 years
+    Input: 44 years
+    Output: 521.8399999999999 years
 
 2. Project organization
   * Divide script into user interface (controls user input form) and back end (performs the various age calculations)
@@ -45,9 +49,8 @@ A solar year lasts 365 days on planet Earth. However, the length of a solar year
   * Use bootstrap & CSS for minimal styling of single user interface page (not planning to use SASS). Ages will be hidden until form submission.
 
 4. Future features under development
-  * Calculate age based on birthdate input by user.  
-  * Take two dates and determine the difference, in seconds.
-  * Determine how many years a user has left to live on each planet.
+  * Determine how many years a user has left to live on each planet based on valid life expectancy data.
+  * Provide more accurate age calculations that account for variations like leap years, etc.
 
 ## Known Bugs
 
