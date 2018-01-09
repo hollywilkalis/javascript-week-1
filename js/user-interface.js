@@ -11,7 +11,6 @@ $(document).ready(function() {
   $("form#age-input").submit(function(event) {
     event.preventDefault();
     var name = $("#name").val();
-    // var age = parseInt($("#age").val());
     var birthdate = $("#birthdate").val();
     var userAge = ageCalc(birthdate);
     var ageCalculator = new Person(name, birthdate, userAge);
