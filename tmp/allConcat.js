@@ -10,15 +10,15 @@ function ageCalc(birthdate) {
 $(document).ready(function() {
   $("form#age-input").submit(function(event) {
     event.preventDefault();
-    var name = $("#name").val();
-    var birthdate = $("#birthdate").val();
-    var userAge = ageCalc(birthdate);
-    var ageCalculator = new Person(name, birthdate, userAge);
-    var ageInSeconds = (ageCalculator.calculateSeconds(userAge));
-    var ageOnMercury = (ageCalculator.mercuryAge(userAge)).toFixed(2);
-    var ageOnVenus = (ageCalculator.venusAge(userAge)).toFixed(2);
-    var ageOnMars = (ageCalculator.marsAge(userAge)).toFixed(2);
-    var ageOnJupiter = (ageCalculator.jupiterAge(userAge)).toFixed(2);
+    const name = $("#name").val();
+    const birthdate = $("#birthdate").val();
+    const userAge = ageCalc(birthdate);
+    const ageCalculator = new Person(name, birthdate, userAge);
+    const ageInSeconds = (ageCalculator.calculateSeconds(userAge));
+    const ageOnMercury = (ageCalculator.mercuryAge(userAge)).toFixed(2);
+    const ageOnVenus = (ageCalculator.venusAge(userAge)).toFixed(2);
+    const ageOnMars = (ageCalculator.marsAge(userAge)).toFixed(2);
+    const ageOnJupiter = (ageCalculator.jupiterAge(userAge)).toFixed(2);
 
     $("#your-planetary-ages").show();
     $("#name-display").text(name);

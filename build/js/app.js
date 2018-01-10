@@ -35,13 +35,6 @@ Person.prototype.jupiterAge = function (userAge) {
 
 exports.personModule = Person;
 
-// var now = new Date();
-// var past = new Date(this.birthday);
-// var nowYear = now.getFullYear();
-// var pastYear = past.getFullYear();
-// var userAge = nowYear - pastYear;
-// return userAge;
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
