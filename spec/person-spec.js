@@ -16,14 +16,26 @@ describe('Person', function() {
     expect(testUser.calculateSeconds()).not.toEqual(1387584100);
   });
 
-  it('should test whether the age of the user is being correctly converted to the corresponding age for Mercury, Venus, Mars, and Jupiter', function() {
+  it('should test whether the age of the user is being correctly converted to the corresponding age for Mercury', function() {
     //testing reflects rounding of ages to two decimal places
     expect(testUser.mercuryAge()).toEqual(10.559999999999999);
     expect(testUser.mercuryAge()).not.toEqual(11);
+  });
+
+  it('should test whether the age of the user is being correctly converted to the corresponding age for Venus', function() {
+    //testing reflects rounding of ages to two decimal places
     expect(testUser.venusAge()).toEqual(27.28);
     expect(testUser.venusAge()).not.toEqual(27);
+  });
+
+  it('should test whether the age of the user is being correctly converted to the corresponding age for Mars', function() {
+    //testing reflects rounding of ages to two decimal places
     expect(testUser.marsAge()).toEqual(82.72);
     expect(testUser.marsAge()).not.toEqual(84);
+  });
+
+  it('should test whether the age of the user is being correctly converted to the corresponding age for Jupiter', function() {
+    //testing reflects rounding of ages to two decimal places
     expect(testUser.jupiterAge()).toEqual(521.8399999999999);
     expect(testUser.jupiterAge()).not.toEqual(500);
   });

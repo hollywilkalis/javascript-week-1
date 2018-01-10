@@ -8,8 +8,7 @@ var del = require('del');
 var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
 var babelify = require("babelify");
-var lifeExpectancy = require('life-expectancy');
-var countries = require('country-list')();
+var browserSync = require('browser-sync').create();
 
 
 //tells gulp where to find the required bootstrap files
@@ -88,9 +87,29 @@ gulp.task("build", ['clean'], function(){
   }
 });
 
+gulp.task('bowerBuild', ['bower'], function(){
+  browserSync.reload();
+});
+
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./",
+      index: "index.html"
+    }
+  });
+  gulp.watch(['js/*.js'], ['jsBuild']);
+  gulp.watch(['bower.json'], ['bowerBuild']);
+});
+
 //when things go wrong and you need a hint
 gulp.task('jshint', function(){
   return gulp.src(['js/*.js'])
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+  .pipe(jshint())
+  .pipe(jshint.reporter('default'));
+});
+
+
+gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
+  browserSync.reload();
 });
